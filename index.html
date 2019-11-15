@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finanse List version 2</title>
+	<meta charset="utf-8" />
+    <!-- Font-awesome -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+     <!-- JQ -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="CSS/first_file.css" />
+</head>
+<body>
+    <div class="information">
+        <p>Максимальный балланс, который может быть - 100000р</p>
+    </div>
+	<input type="number" name="budjet" placeholder="Введите свой бюджет" id="budjet-place" />
+	<button id="btn_1">
+		<span>Добавить</span>
+	</button>
+
+    <div class="coshel">
+        <span>Рекомендуем для начала поставить квартал, а затем уже добовлять деньги в кошелек</span>
+    </div>
+
+    <div class="message-block">
+
+    </div>
+
+	<hr />
+
+	<div class="budjet-block">
+		<span>Ваш бюдшет на</span><select name="choice" size="1" id="srok" onchange="Change()">
+		    <option value="Выберете срок">Выберете срок</option>
+			<option value="Day">День</option>
+			<option value="Week">Неделю</option>
+			<option value="Month">Месяц</option>
+		</select><p id="budjet">0</p><p id="v">₽</p>
+	</div>
+    
+    <div class="pole-block">
+	    <input type="number" name="kol-vo" placeholder="Сколько вы потратили?" id="col_vo" />
+        <input type="text" name="text_b" placeholder="Что вы купили за эти деньги?" id="infor" />
+         <div class="container-emoji">
+            <div class="f por">
+                <i class="fas fa-utensils p cop"></i>
+            </div>
+            <div class="f por">
+                <i class="fas fa-shopping-cart p cop"></i>          
+            </div>
+            <div class="f por">
+                <i class="fas fa-hamburger p cop"></i>          
+            </div>
+            <div class="f por">
+                <i class="fas fa-gamepad p cop"></i>        
+            </div>
+            <div class="f por">
+                <i class="fab fa-playstation p cop"></i>
+            </div>
+            <div class="f por">
+                <i class="fab fa-xbox p cop"></i>           
+            </div>
+            <div class="f por">
+                <i class="fab fa-steam p cop"></i>          
+            </div>
+            <div class="f por">
+                <i class="fas fa-tv p cop"></i>         
+            </div>
+            <div class="f por">
+                <i class="fas fa-mobile-alt p cop"></i>         
+            </div>
+            <div class="f por">
+                <i class="fas fa-laptop p cop"></i>         
+            </div>
+            <div class="f por">
+                <i class="fas fa-car p cop"></i>            
+            </div>
+            <div class="f por">
+                <i class="fas fa-gas-pump p cop"></i>           
+            </div>
+            <div class="f por">
+                <i class="fas fa-charging-station p cop"></i>               
+            </div>
+            <div class="f por">
+                <i class="fab fa-amazon p cop"></i>
+            </div>
+            <div class="f por">
+                <i class="fas fa-book p cop"></i>
+            </div>
+            <div class="f por">
+                <i class="fas fa-capsules p cop"></i>
+            </div>
+            <div class="f por">
+                <i class="fas fa-couch p cop"></i>
+            </div>
+            <div class="f por">
+                <i class="fas fa-plane p cop"></i>
+            </div>
+            <div class="f por">
+                <i class="fas fa-ambulance p cop"></i>
+            </div>
+            <div class="f por">
+                <i class="fas fa-cocktail p cop"></i>
+            </div>
+            <div class="f por">
+                <i class="fas fa-tshirt p cop"></i>
+            </div>
+            <div class="f por">
+                <i class="fas fa-school p cop"></i>
+            </div>
+            <div class="f por">
+                <i class="fas fa-university p cop"></i> 
+            </div>
+            <div class="f por">
+                <i class="fas fa-taxi p cop"></i>
+            </div>
+            <div class="f por">
+                <i class="fas fa-bus p cop"></i>
+            </div>
+            <!-- Вторая строка -->
+            <div class="f1 por">
+                <i class="fas fa-solar-panel p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fab fa-twitch p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fas fa-dumbbell p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fas fa-hospital-alt p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="far fa-keyboard p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fab fa-btc p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fas fa-cat p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fab fa-github p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fab fa-wordpress p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fas fa-bicycle p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fas fa-birthday-cake p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fas fa-baby p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fas fa-campground p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fas fa-dog p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fas fa-donate p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fas fa-credit-card p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fas fa-headphones p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fas fa-music p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fas fa-guitar p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fas fa-wine-bottle p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fas fa-home p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fas fa-power-off p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fab fa-paypal p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fab fa-cc-mastercard p2 cop"></i>
+            </div>
+            <div class="f1 por">
+                <i class="fab fa-cc-visa p2 cop"></i>
+            </div>
+        </div>  
+	</div>
+
+    <div class="day-block">
+        <span id="t">Сегодня</span>
+    </div>
+    <div class="d-container">
+        
+    </div>
+       
+    <div class="w-block">   
+        <div class="w">
+            <span id="p">Понедельник</span>
+        </div>
+        <div class="w-container w-contain1">
+        
+        </div>
+        <div class="w">
+            <span class="w-day">Вторник</span>
+        </div>
+        <div class="w-container w-contain2">
+    
+        </div> 
+        <div class="w">
+            <span class="w-day">Среда</span>
+        </div>
+        <div class="w-container W1 w-contain3">
+    
+        </div> 
+        <div class="w">
+            <span class="w-day">Четверг</span>
+        </div>
+        <div class="w-container w-contain4">
+    
+        </div> 
+        <div class="w">
+            <span class="w-day">Пятница</span>
+        </div>
+        <div class="w-container w-contain5">
+    
+        </div>
+        <div class="w">
+            <span class="w-day">Суббота</span>
+        </div>
+        <div class="w-container W1 w-contain6">
+    
+        </div> 
+        <div class="w Vosk">
+            <span id="v">Воскресенье</span>
+        </div>
+        <div class="w-container W2 w-contain7">
+        
+        </div>
+    </div>
+
+    <div class="m-block">
+        <div class="m">
+            <span class="m-word">Понедельник</span>
+            <p class="cifra">1</p>
+        </div>
+        <div class="m-container m-container1">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Вторник</span>
+            <p class="cifra">2</p>
+        </div>
+        <div class="m-container m-container2">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Среда</span>
+            <p class="cifra">3</p>
+        </div>
+        <div class="m-container W-cont m-container3">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Четверг</span>
+            <p class="cifra">4</p>
+        </div>
+        <div class="m-container m-container4">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Пятница</span>
+            <p class="cifra">5</p>
+        </div>
+        <div class="m-container m-container5">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Суббота</span>
+            <p class="cifra">6</p>
+        </div>
+        <div class="m-container W-cont m-container6">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Воскресенье</span>
+            <p class="cifra">7</p>
+        </div>
+        <div class="m-container m-container7">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Понедельник</span>
+            <p class="cifra">8</p>
+        </div>
+        <div class="m-container m-container8">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Вторник</span>
+            <p class="cifra">9</p>
+        </div>
+        <div class="m-container W-cont m-container9">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Среда</span>
+            <p class="cifra">10</p>
+        </div>
+        <div class="m-container m-container10">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Четверг</span>
+            <p class="cifra">11</p>
+        </div>
+        <div class="m-container m-container11">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Пятница</span>
+            <p class="cifra">12</p>
+        </div>
+        <div class="m-container W-cont m-container12">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Суббота</span>
+            <p class="cifra">13</p>
+        </div>
+        <div class="m-container m-container13">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Воскресенье</span>
+            <p class="cifra">14</p>
+        </div>
+        <div class="m-container m-container14">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Понедельник</span>
+            <p class="cifra">15</p>
+        </div>
+        <div class="m-container W-cont m-container15">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Вторник</span>
+            <p class="cifra">16</p>
+        </div>
+        <div class="m-container m-container16">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Среда</span>
+            <p class="cifra">17</p>
+        </div>
+        <div class="m-container m-container17">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Четверг</span>
+            <p class="cifra">18</p>
+        </div>
+        <div class="m-container W-cont m-container18">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Пятница</span>
+            <p class="cifra">19</p>
+        </div>
+        <div class="m-container m-container19">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Суббота</span>
+            <p class="cifra">20</p>
+        </div>
+        <div class="m-container m-container20">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Воскресенье</span>
+            <p class="cifra">21</p>
+        </div>
+        <div class="m-container W-cont m-container21">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Понедельник</span>
+            <p class="cifra">22</p>
+        </div>
+        <div class="m-container m-container22">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Вторник</span>
+            <p class="cifra">23</p>
+        </div>
+        <div class="m-container m-container23">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Среда</span>
+            <p class="cifra">24</p>
+        </div>
+        <div class="m-container W-cont m-container24">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Четверг</span>
+            <p class="cifra">25</p>
+        </div>
+        <div class="m-container m-container25">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Пятница</span>
+            <p class="cifra">26</p>
+        </div>
+        <div class="m-container m-container26">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Суббота</span>
+            <p class="cifra">27</p>
+        </div>
+        <div class="m-container W-cont m-container27">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Понедельник</span>
+            <p class="cifra">28</p>
+        </div>
+        <div class="m-container m-container28">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Вторник</span>
+            <p class="cifra">29</p>
+        </div>
+        <div class="m-container m-container29">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Среда</span>
+            <p class="cifra">30</p>
+        </div>
+        <div class="m-container W-cont m-container30">
+            
+        </div>
+        <div class="m">
+            <span class="m-word">Четверг</span>
+            <p class="cifra">31</p>
+        </div>
+        <div class="m-container L m-container31">
+            
+        </div>
+    </div>
+
+    <div class="week-block">
+        <div class="x-block">
+            <i class="fas fa-times x"></i>
+        </div>
+        <div class="pn r1 preload_w" onclick="Create_block('.w-contain1', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d2.classList.remove('F'); btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide')">
+            <span id="c1">Понедельник</span>
+        </div>
+        <div class="pn preload_w" onclick="Create_block('.w-contain2', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d2.classList.remove('F'); btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide')"> <!-- + -->
+            <span>Вторник</span>
+        </div>
+        <div class="pn preload_w" onclick="Create_block('.w-contain3', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d2.classList.remove('F'); btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide')">
+            <span>Среда</span>
+        </div>
+        <div class="pn preload_w" onclick="Create_block('.w-contain4', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d2.classList.remove('F'); btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide')">
+            <span>Четверг</span>
+        </div>
+        <div class="pn preload_w pt" onclick="Create_block('.w-contain5', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d2.classList.remove('F'); btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide')">
+            <span>Пятница</span>
+        </div>
+        <div class="pn preload_w" onclick="Create_block('.w-contain6', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d2.classList.remove('F'); btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide')">
+            <span>Суббота</span>
+        </div>
+        <div class="pn r2 preload_w" onclick="Create_block('.w-contain7', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d2.classList.remove('F'); btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span id="c2">Воскресенье</span>
+        </div>
+    </div>
+
+    <div class="month-block">
+        <div class="X-block">
+            <i class="fas fa-times X"></i>
+        </div>
+        <div class="m" onclick="Create_block('.m-container1', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T'); btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');"> 
+            <span class="d">Понедельник</span>
+            <p class="ch">1</p> 
+        </div>
+        <div class="m" onclick="Create_block('.m-container2', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T'); btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Вторник</span>
+            <p class="ch">2</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container3', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');   btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Среда</span>
+            <p class="ch">3</p>   
+        </div>
+        <div class="m" onclick="Create_block('.m-container4', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Четверг</span>
+            <p class="ch">4</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container5', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Пятница</span>
+            <p class="ch">5</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container6', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Суббота</span>
+            <p class="ch">6</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container7', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Воскресенье</span>
+            <p class="ch">7</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container8', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Понедельник</span>
+            <p class="ch">8</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container9', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Вторник</span>
+            <p class="ch">9</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container10', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit')">
+            <span class="d">Среда</span>
+            <p class="ch">10</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container11', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Четверг</span>
+            <p class="ch">11</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container12', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Пятница</span>
+            <p class="ch">12</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container13', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Суббота</span>
+            <p class="ch">13</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container14', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Воскресенье</span>
+            <p class="ch">14</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container15', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Понедельник</span>
+            <p class="ch">15</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container16', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Вторник</span>
+            <p class="ch">16</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container17', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Среда</span>
+            <p class="ch">17</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container18', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Четверг</span>
+            <p class="ch">18</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container19', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Пятница</span>
+            <p class="ch">19</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container20', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Суббота</span>
+            <p class="ch">20</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container21', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Воскресенье</span>
+            <p class="ch">21</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container22', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Понедельник</span>
+            <p class="ch">22</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container23', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Вторник</span>
+            <p class="ch">23</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container24', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Среда</span>
+            <p class="ch">24</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container25', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Четверг</span>
+            <p class="ch">25</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container26', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Пятница</span>
+            <p class="ch">26</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container27', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Суббота</span>
+            <p class="ch">27</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container28', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Воскресенье</span>
+            <p class="ch">28</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container29', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Понедельник</span>
+            <p class="ch">29</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container30', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Вторник</span>
+            <p class="ch">30</p>
+        </div>
+        <div class="m" onclick="Create_block('.m-container31', '380px' /* 1 */, '280px' /* 2 */,  '280px' /* 3 */, '25px' /* 4 */, '33px' /* 5 */, '40px' /* 6 */, '60px' /* 7 */, '60px' /* 8 */, '-40px' /*  9 Продолжу с этого момента */, '100px' /* 10 */, '100px' /* 11 */, '140px' /* 12 */, '100px' /* 13 */, '40px' /*  14 */, '60px' /* 15 */, '15px' /* 16 */, '-100px' /* 17 */, '10px' /* 18 */, '120px' /* 19 */, '60px' /* 20 */, '-119px' /* 21 */, '200px' /* 22 */, '0px' /* 23 */, '20px' /* 24 */, '-10px' /* 25 */, '120px' /* 26 */, '-50px' /* 27 */, '295px' /* 28 */, '40px' /* 29 */, '395px' /* 30 */, '475px' /* 31 */, '380px' /* 32 */); d3.classList.remove('T');  btn_2.classList.remove('skrit'); btn_3.classList.remove('J_hide');">
+            <span class="d">Среда</span>
+            <p class="ch">31</p>
+        </div> 
+    </div>
+
+	<button id="btn_2">
+		<span>Указать</span>
+	</button>
+
+    <button id="btn_3">
+        <span>Очистить</span>
+    </button>
+    
+    <footer>
+        <div class="inf_of_bud">
+            <span id="m">Ваш бюджет на</span><p id="Period">День</p>
+            <span>-</span>
+            <p id="Symmarno">1000 ₽</p>
+        </div>
+
+        <div class="Min">
+            <span>Меньше всего вы потратили на</span>
+            <span id="min"></span><p id="col"></p>
+            <!-- <div class="emoj_end"></div> -->
+        </div>
+
+        <div class="Max">
+            <span>Больше всего вы потратили на</span>
+            <span id="max"></span><p id="col2"></p>
+            <!-- <div class="emoj_end_2"></div> -->
+        </div>
+    </footer>
+
+    <p id="hide_information"></p> 
+
+    <div class="ekran_block">
+        <p id="main_text">При низком или отрицательном счете вы хотите продолжить?</p> 
+
+        <div class="yes">
+            <span>Да</span>
+        </div>
+
+        <div class="inf_1">
+            <p id="Opisanie_1">Если вы нажмете на "Да", то при отрицательном или нулевом счете у вас появиться статистика, где будет указанно на что вы потратили и сколько</p>
+        </div>
+
+        <div class="no">
+            <span>Нет</span>
+        </div>
+
+        <div class="inf_2">
+            <span id="Opisanie_2">Если вы нажмете на "Нет", то ваша история обнулиться и нужно вести её заного</span>
+        </div>
+    </div>
+
+    <script src="JS/index.js"></script>
+</body>
+</html>
+
+<!-- 1. Чуть-чуть переделать систему подсчета в конце....... 2. Чуть-чуть переверстать(До верстать)..... 3. Сделать так, чтобы при изменении информации в блоке не снимался дополнительно его денежный .textContent . Доделать после изучения Vue.js и нескольких проектов с ним + после сайта по BF1-->
+
